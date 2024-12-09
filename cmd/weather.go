@@ -19,7 +19,7 @@ var weatherCmd = &cobra.Command{
 	Short: "Gets the weather for belfast",
 	Long:  `Gets the weather for belfast from wttr.in using format 3`,
 	Run: func(cmd *cobra.Command, args []string) {
-		resp, err := http.Get("https://wttr.in/belfast?A")
+		resp, err := http.Get("https://wttr.in/belfast?A") // /A return ANSI format
 		if err != nil {
 			log.Println(err)
 			os.Exit(1)
