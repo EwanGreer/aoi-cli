@@ -22,7 +22,7 @@ var weatherCmd = &cobra.Command{
 			os.Exit(1)
 		}
 
-		resp, err := http.Get(fmt.Sprintf("https://wttr.in/%s?A", location)) // /A return ANSI format
+		resp, err := http.Get(fmt.Sprintf("https://wttr.in/%s?A", location))
 		if err != nil {
 			log.Println(err)
 			os.Exit(1)
